@@ -13,8 +13,7 @@ RUN npm install
 # Install the Angular CLI
 RUN npm install -g @angular/cli
 
-# Uncomment the following line to build the Angular app in production mode
-# RUN ng build --configuration=production --output-path=/dist
+RUN ng build --configuration=production --output-path=/dist
 
 # Copy the rest of the app files to the working directory
 COPY . .
