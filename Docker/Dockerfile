@@ -1,5 +1,5 @@
-# Use the official Node.js image as the base image
-FROM docker.io/library/node
+# Use a specific version of the Node.js image
+FROM docker.io/library/node:18.13
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -10,10 +10,11 @@ COPY package*.json ./
 # Install the dependencies
 RUN npm install
 
-# Build the Angular app
+# Install the Angular CLI
 RUN npm install -g @angular/cli
 
-# && ng build --configuration=production --output-path=/dist
+# Uncomment the following line to build the Angular app in production mode
+# RUN ng build --configuration=production --output-path=/dist
 
 # Copy the rest of the app files to the working directory
 COPY . .
