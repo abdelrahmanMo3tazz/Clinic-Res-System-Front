@@ -1,5 +1,5 @@
 # Use a specific version of the Node.js image
-FROM docker.io/library/node:18.13
+FROM node:latest
 
 # Set the working directory inside the container
 WORKDIR /app
