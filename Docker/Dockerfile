@@ -1,6 +1,8 @@
 # Use a specific version of the Node.js image
 FROM node:latest
 
+RUN /app
+
 # Set the working directory inside the container
 WORKDIR /app
 
